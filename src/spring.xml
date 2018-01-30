@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:cxf="http://cxf.apache.org/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 								                
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 						  
+	http://cxf.apache.org/cxf 
+   	http://cxf.apache.org/schemas/core.xsd http://cxf.apache.org/jaxrs         					   
+    http://cxf.apache.org/schemas/jaxrs.xsd 
+   	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd ">
+   	<!-- 设置客户端信息 -->
+	<jaxws:client id="weatherClient1" address="http://localhost:8080/CXF_server/ws/weather"
+	 serviceClass="client1.WeatherInterface"></jaxws:client>
+	
+	<jaxws:client id="weatherClient2" address="http://localhost:8080/CXF_server/ws/weather2"
+	 serviceClass="client2.WeatherInterface"></jaxws:client>
+</beans>
